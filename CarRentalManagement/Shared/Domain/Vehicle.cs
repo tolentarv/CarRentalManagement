@@ -13,7 +13,7 @@ namespace CarRentalManagement.Shared.Domain
 		public int MakeId { get; set; }
 		public virtual Make? Make { get; set; }
 		public virtual Model? Model { get; set; }
-		public virtual Color? Color { get; set; }
+		public virtual Colour? Colour { get; set; }
 		public virtual List<Booking> Bookings { get; set; }
 	}
 }

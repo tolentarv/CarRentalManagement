@@ -5,12 +5,12 @@ using System;
 
 namespace CarRentalManagement.Server.Configurations.Entities
 {
-	public class ColourSeedConfiguration : IEntityTypeConfiguration<Color>
+	public class ColourSeedConfiguration : IEntityTypeConfiguration<Colour>
 	{
-		public void Configure(EntityTypeBuilder<Color> builder)
+		public void Configure(EntityTypeBuilder<Colour> builder)
 		{
 			builder.HasData(
-				new Color
+				new Colour
 				{
 					Id = 1,
 					Name = "Black",
@@ -19,7 +19,7 @@ namespace CarRentalManagement.Server.Configurations.Entities
 					CreatedBy = "System",
 					UpdatedBy = "System"
 				},
-				new Color
+				new Colour
 				{
 					Id = 2,
 					Name = "Blue",

@@ -16,7 +16,7 @@ namespace CarRentalManagement.Server.Data
         {
         }
         public DbSet<Vehicle> Vehicles { get; set; }
-        public DbSet<Color> Colors { get; set; }
+        public DbSet<Colour> Colours { get; set; }
         public DbSet<Make> Makes { get; set; }
         public DbSet<Model> Models { get; set; }
         public DbSet<Customer> Customers { get; set; }
