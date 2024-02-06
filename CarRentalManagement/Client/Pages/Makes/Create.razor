@@ -1,0 +1,21 @@
+﻿@page "/makes/create/"
+@using CarRentalManagement.Shared.Domain
+@inject HttpClient _client
+@inject NavigationManager _navManager
+
+<h3 class="card-title">Create new Makes</h3>
+<hr />
+<br />
+
+	<FormComponent ButtonText="Create Make" make="make"
+				   OnValidSubmit="@CreateMake" />
+@code {
+	Make make = new Make();
+
+	private async Task CreateMake()
+	{
+		await _client.PostAsJsonAsync(Endpoints.MakesEndpoint, make);
+		_navManager.NavigateTo("/makes");
+	}
+
+}
